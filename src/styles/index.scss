@@ -1,0 +1,17 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './reset.scss';
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'roboto_regular', sans-serif;
+  font-size: 1rem;
+  color: $black;
+  background-color: $bg;
+}
