@@ -1,11 +1,12 @@
 import React from 'react';
-import Menu from '../Menu';
+import SectionHeader from '../SectionHeader';
+import MainHeader from '../MainHeader';
 
 const Header: React.FC = () => {
   return (
     <header>
-      <p>Header</p>
-      <Menu />
+      <MainHeader />
+      <SectionHeader />
     </header>
   );
 };
