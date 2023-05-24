@@ -14,6 +14,7 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path={ROUTES.index} element={<Layout />}>
+            <Route path={ROUTES.index} element={<Navigate to={ROUTES.resume} replace />} />
             <Route path={ROUTES.resume} element={<Resume />} />
             <Route path={ROUTES.map} element={<Map />} />
             <Route path={ROUTES.timer} element={<Timer />} />
