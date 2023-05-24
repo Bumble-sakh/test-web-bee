@@ -2,6 +2,7 @@ import BasicBlock from '@components/BasicBlock';
 import React, { useContext, useEffect, useState } from 'react';
 import getTime from '@utils/getTime';
 import { TimerContext } from '@src/App';
+import styles from './Timer.module.scss';
 
 const Timer: React.FC = () => {
   const startTime = useContext(TimerContext);
@@ -22,7 +23,7 @@ const Timer: React.FC = () => {
 
   return (
     <BasicBlock title="Timer">
-      <span>{getTime(seconds)}</span>
+      <div className={styles.timer}>{getTime(seconds)}</div>
     </BasicBlock>
   );
 };
