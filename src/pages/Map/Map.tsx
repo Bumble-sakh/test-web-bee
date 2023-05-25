@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BasicBlock from '@components/BasicBlock';
 import Loader from './Loader';
 import { YMaps, Map as YMap, Placemark } from '@pbe/react-yandex-maps';
-import { LOCATION, POINT } from '@config/map';
+import { YMAP_API_KEY, LOCATION, POINT } from '@config/map';
 import styles from './Map.module.scss';
 
 const Map: React.FC = () => {
@@ -15,7 +15,7 @@ const Map: React.FC = () => {
   return (
     <BasicBlock title="Map">
       <div className={styles.map}>
-        <YMaps>
+        <YMaps query={{ apikey: YMAP_API_KEY }}>
           {isLoading && <Loader />}
           <YMap defaultState={LOCATION} width={'100%'} height={480} onLoad={onLoadHandler}>
             <Placemark
