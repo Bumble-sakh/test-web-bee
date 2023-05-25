@@ -21,6 +21,10 @@ const Resume: React.FC = () => {
     twitterLink: '#',
   };
 
+  const onSubmitHandler = (e: React.FormEvent): void => {
+    e.preventDefault();
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.posts}>
@@ -84,7 +88,7 @@ const Resume: React.FC = () => {
         </SideBlock>
 
         <SideBlock title="Share your thoughts">
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={onSubmitHandler}>
             <textarea placeholder="Enter your message..." className={styles.textarea}></textarea>
             <button type="submit" className={styles.save}>
               Save

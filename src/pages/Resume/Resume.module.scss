@@ -111,4 +111,8 @@
   font-family: 'roboto_medium', sans-serif;
   line-height: 24px;
   color: $white;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
