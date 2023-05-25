@@ -6,25 +6,41 @@ import updateIcon from '@assets/icons/update.svg';
 import closeIcon from '@assets/icons/close.svg';
 import timeIcon from '@assets/icons/time.svg';
 
+export enum HeaderSize {
+  l = 'l',
+  s = 's',
+}
+
 interface BlockProps {
   collapse?: boolean;
   update?: boolean;
   close?: boolean;
   title?: string;
   time?: string;
+  size?: HeaderSize;
 }
 
-const BlockHeader: React.FC<BlockProps> = ({ collapse = false, update = false, close = false, title, time }) => {
+const BlockHeader: React.FC<BlockProps> = ({
+  collapse = false,
+  update = false,
+  close = false,
+  title,
+  time,
+  size = HeaderSize.l,
+}) => {
+  const isSizeSmall = size === HeaderSize.s;
+  const headerStyles = isSizeSmall ? `${styles.header} ${styles.small}` : `${styles.header}`;
+
   const isTitle = Boolean(title);
   const isTime = Boolean(time);
   const isControls = collapse || update || close;
 
   return (
-    <div className={styles.header}>
+    <div className={headerStyles}>
       {isTitle && <h3 className={styles.title}>{title}</h3>}
 
       {isTime && (
-        <div>
+        <div className={styles.time}>
           <img src={timeIcon} alt="time" />
           <span>{time} ago</span>
         </div>
