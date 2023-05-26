@@ -1,13 +1,44 @@
+@import '@styles/colors.scss';
+
 .header {
+  height: 56px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: 16px;
+  font-size: 1.143rem;
   padding: 16px 0;
 }
 
+.small {
+  height: 37px;
+  font-family: 'roboto_medium', sans-serif;
+  line-height: 20px;
+  font-size: 1rem;
+  border-bottom: 1px solid $grey;
+  padding: 0 13px 0 16px;
+
+  & .controls {
+    transform: rotate(180deg);
+
+    & button {
+      height: 10px;
+    }
+  }
+}
+
 .title {
+  flex-grow: 1;
+  font-size: inherit;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
   font-size: 1.143rem;
 }
 

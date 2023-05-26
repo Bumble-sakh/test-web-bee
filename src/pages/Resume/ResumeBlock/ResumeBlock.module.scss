@@ -1,0 +1,106 @@
+@import '@styles/colors.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+
+  & .name {
+    font-family: 'roboto_medium', sans-serif;
+    font-size: 32px;
+  }
+
+  & .title {
+    font-family: 'roboto_medium', sans-serif;
+    font-size: 18px;
+    color: #8f8f8f;
+  }
+
+  & ul {
+    display: flex;
+    color: #8f8f8f;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.contact {
+  & a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 8px;
+    text-decoration: none;
+    color: $black;
+
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.photo {
+  max-width: 200px;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.text {
+  margin-bottom: 16px;
+
+  & a {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+
+  & p {
+    font-family: 'roboto_medium', sans-serif;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    & li {
+      border-radius: 8px;
+      background-color: #47b091;
+      font-size: 0.857rem;
+      color: #ffffff;
+      padding: 5px 8px;
+    }
+  }
+}
