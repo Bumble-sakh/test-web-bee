@@ -1,6 +1,7 @@
 @import '@styles/colors.scss';
 
 .block {
+  min-width: 264px;
   background-color: $white;
   box-shadow: 0px 0px 2px $shadow;
   margin-bottom: 32px;

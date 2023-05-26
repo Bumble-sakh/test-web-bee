@@ -1,0 +1,61 @@
+@import '@styles/colors.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 16px 0 17px;
+
+  & li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: scale-down;
+}
+
+.title {
+}
+
+.money {
+  font-size: 0.857rem;
+  line-height: 14px;
+  color: $second;
+}
+
+.badge {
+  border-radius: 8px;
+  background-color: $green;
+  font-size: 0.857rem;
+  color: $white;
+  padding: 2px 5px;
+}
+
+.red {
+  background-color: $red;
+}
+
+.hr {
+  width: 100%;
+  border-top: 1px solid $grey;
+  margin: 0;
+  margin-top: -2px;
+}
