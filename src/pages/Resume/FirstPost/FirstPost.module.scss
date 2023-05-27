@@ -1,0 +1,94 @@
+@import '@styles/colors.scss';
+
+.image {
+  width: 100%;
+  margin-bottom: 14px;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.comment-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+
+  & img {
+    width: 24px;
+    height: 24px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: $blue;
+  }
+
+  & span {
+  }
+}
+
+.comment-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  border-left: 2px solid $grey;
+  padding-left: 8px;
+  margin-bottom: 16px;
+
+  & .text {
+    line-height: 16px;
+  }
+
+  & .signature {
+    color: $second;
+
+    & i {
+      font-style: italic;
+    }
+  }
+}
+
+.comment-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+
+.views,
+.comments {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  & img {
+    width: 24px;
+    height: 24px;
+  }
+
+  & span {
+    font-size: 1.143rem;
+    line-height: 19px;
+  }
+}
